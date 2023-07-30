@@ -1,0 +1,80 @@
+.back {
+  background: #625f5f;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.inputs input {
+  max-width: 200px;
+  padding: 10px 5px;
+}
+.inputs button {
+  width: 200px;
+  padding: 10px 5px;
+}
+
+.track {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: #000;
+}
+.track .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.track img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+.track p {
+  color: #f1f1f1;
+}
+.track .names {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.track .names span {
+  color: #f1f1f1;
+  font-size: 16px;
+}
+.track .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.track .right .view {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.track .right .view i {
+  color: #848484;
+  font-size: 14px;
+}
+.track .right .view p {
+  color: #f1f1f1;
+  font-size: 14px;
+}
+.track .right .duration {
+  color: #f1f1f1;
+  font-size: 14px;
+  display: flex;
+  gap: 5px;
+}
+
+/*# sourceMappingURL=style.module.css.map */

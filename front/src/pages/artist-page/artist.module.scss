@@ -1,0 +1,57 @@
+.main{
+  flex-grow: 1;
+  margin-top: 20px;
+  .items{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .item{
+      width: 200px;
+      height: 200px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        .name{
+          opacity: 1;
+          transition: .3s ease-in-out;
+        }
+      }
+      .name{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+        filter: grayscale(100%);
+        opacity: 0;
+        color: #f1f1f1;
+        z-index: 10;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img{
+        object-fit: cover;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}

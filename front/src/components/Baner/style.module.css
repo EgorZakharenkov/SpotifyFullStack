@@ -1,0 +1,127 @@
+.baner {
+  position: relative;
+  height: 300px;
+}
+.baner .imgBaner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backdrop-filter: blur(10px);
+}
+.baner .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+.baner .content .breadCrump {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f1f1f1;
+  font-size: 18px;
+  cursor: pointer;
+}
+.baner .content .breadCrump p {
+  color: #848484;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.baner .content .breadCrump p span {
+  color: #f1f1f1;
+}
+.baner .content .artist {
+  color: #f1f1f1;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.baner .content .artist .left .name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.baner .content .artist .left .name h2 {
+  cursor: pointer;
+  font-size: 50px;
+}
+.baner .content .artist .left .name img {
+  width: 30px;
+}
+.baner .content .artist .left p {
+  font-size: 14px;
+}
+.baner .content .artist .left p i {
+  margin-right: 6px;
+}
+.baner .content .artist .left p span {
+  color: #848484;
+  margin-left: 5px;
+}
+.baner .content .artist .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.baner .content .artist .right a {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f1f1f1;
+  border-radius: 100vh;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.baner .content .artist .right a:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+.baner .content .artist .right .playing {
+  background: #49e12e;
+}
+.baner .content .artist .right .playing:hover {
+  box-shadow: 0 0 20px rgba(68, 227, 60, 0.8);
+}
+.baner .content .artist .right .follow {
+  background: #000;
+  gap: 10px;
+}
+.baner .content .artist .right .noFollow {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.baner .bottomLayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+@media screen and (max-width: 700px) {
+  .baner {
+    height: 230px;
+  }
+  .baner .content .artist .left .name h2 {
+    font-size: 25px;
+  }
+  .baner .content .artist .right {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.module.css.map */

@@ -1,0 +1,192 @@
+.download {
+  color: #f1f1f1;
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+.content .bg {
+  width: 100%;
+  position: relative;
+  height: 101px;
+}
+.content .bg .bg_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: fill;
+  z-index: -1;
+}
+.content .bg .MusicPlayer {
+  overflow: hidden;
+  z-index: 200;
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(40px) brightness(80%);
+}
+.content .bg .MusicPlayer .songImg {
+  cursor: pointer;
+  width: 120px;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+.content .bg .MusicPlayer .songImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .bg .MusicPlayer .songAttributes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content .bg .MusicPlayer .songAttributes .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .bg .MusicPlayer .songAttributes .top .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content .bg .MusicPlayer .songAttributes .top .left .songInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content .bg .MusicPlayer .songAttributes .top .left .songInfo span {
+  width: 100px;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+.content .bg .MusicPlayer .songAttributes .top .left .songInfo p {
+  font-size: 12px;
+  color: #848484;
+}
+.content .bg .MusicPlayer .songAttributes .top .left .isLove i {
+  color: #49e12e;
+  filter: drop-shadow(0px 0px 4px #49e12e);
+}
+.content .bg .MusicPlayer .songAttributes .top .left, .content .bg .MusicPlayer .songAttributes .top .middle, .content .bg .MusicPlayer .songAttributes .top .right {
+  cursor: pointer;
+  color: #f1f1f1;
+  font-size: 16px;
+}
+.content .bg .MusicPlayer .songAttributes .top .middle {
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content .bg .MusicPlayer .songAttributes .top .middle .back, .content .bg .MusicPlayer .songAttributes .top .middle .PlayPause, .content .bg .MusicPlayer .songAttributes .top .middle .next {
+  display: flex;
+  gap: 15px;
+}
+.content .bg .MusicPlayer .songAttributes .top .middle .PlayPause {
+  color: #f1f1f1;
+}
+.content .bg .MusicPlayer .songAttributes .bottom {
+  padding: 0 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.content .bg .MusicPlayer .songAttributes .bottom input {
+  width: 78%;
+  position: relative;
+  height: 5px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.content .bg .MusicPlayer .songAttributes .bottom input:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #848484;
+  height: 100%;
+  width: var(--player-played);
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.content .bg .MusicPlayer .songAttributes .bottom input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+.content .bg .MusicPlayer .songAttributes .bottom .currentTime, .content .bg .MusicPlayer .songAttributes .bottom .duration {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .MusicPlayer {
+    display: flex;
+    flex-direction: column;
+  }
+  .MusicPlayer .songAttributes .bottom {
+    gap: 15px;
+  }
+  .MusicPlayer .songImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .MusicPlayer .songImg img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .MusicPlayer .songImg img.rot {
+    animation: 10s linear 0s normal none infinite running rot;
+    -webkit-animation: 10s linear 0s normal none infinite running rot;
+  }
+  @keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .download {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.module.css.map */

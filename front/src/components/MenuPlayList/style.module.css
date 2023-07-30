@@ -1,0 +1,56 @@
+.playList .namePlayList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.playList .namePlayList p {
+  font-size: 12px;
+  color: #848484;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.playList .namePlayList i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.playList .scrollPlayList {
+  height: 140px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.playList .scrollPlayList .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #848484;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.playList .scrollPlayList .item:hover {
+  color: #f1f1f1;
+}
+.playList .scrollPlayList .item .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.playList .scrollPlayList .item .wrapper span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.playList .scrollPlayList .item .wrapper i {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 550px) {
+  .playList {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.module.css.map */
